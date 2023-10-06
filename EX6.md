@@ -10,45 +10,21 @@
 ### Program:
 
 ### Create employee table
-```
-CREATE TABLE employd (
-  empid NUMBER,
-  empname VARCHAR(10),
-  dept VARCHAR(10),
-  salary NUMBER
-);
-select * from employd;
-INSERT INTO employd VALUES (1, 'John Doe', 'Sales', 100000);
-INSERT INTO employd VALUES (2, 'Jane Doe', 'Marketing', 120000);
+
+![image](https://github.com/jeevansurya30/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/129417865/3487efaa-f7f7-4f1f-aeca-27bb12bbc218)
+
 ```
 
 ### PLSQL Cursor code
 ```
-DECLARE
-   CURSOR employd_cursor IS
-   SELECT empid,empname,dept,salary
-   FROM employd;
-   emp_id NUMBER;
-   emp_name VARCHAR(50);
-   emp_dept VARCHAR(50);
-   emp_salary NUMBER;
-BEGIN
-  OPEN employd_cursor;
-  LOOP
-    FETCH employd_cursor INTO emp_id, emp_name, emp_dept, emp_salary;
-    EXIT WHEN employd_cursor%NOTFOUND;
-    DBMS_OUTPUT.PUT_LINE('Employee ID: ' || emp_id);
-    DBMS_OUTPUT.PUT_LINE('Employee Name: ' || emp_name);
-    DBMS_OUTPUT.PUT_LINE('Department: ' || emp_dept);
-    DBMS_OUTPUT.PUT_LINE('Salary: ' || emp_salary);
-  END LOOP;
-  CLOSE employd_cursor;
-END;
-/
-```
+![image](https://github.com/jeevansurya30/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/129417865/a6815164-6988-4afe-8453-1283cdef5590)
+
+
+
 
 ### Output:
-![image](https://github.com/jeevansurya30/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/129417865/bde28fdb-f439-4e03-9fef-a9948bba7baf)
+![image](https://github.com/jeevansurya30/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/129417865/dd751abc-cbd9-46cc-bf9f-13d0028da7e5)
+
 
 
 ### Result:
